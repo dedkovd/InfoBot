@@ -1,0 +1,7 @@
+<RCC>
+    <qresource prefix="/">
+        <file alias="info">cuteball-info.png</file>
+        <file alias="anek">korotkie.txt</file>
+        <file alias="questions">viktorina_base_by_Sclex_v2.9/questions.txt</file>
+    </qresource>
+</RCC>
