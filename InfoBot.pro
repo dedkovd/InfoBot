@@ -10,28 +10,25 @@ TARGET = InfoBot
 TEMPLATE = app
 
 
-SOURCES += main.cpp\
-        dialog.cpp
+SOURCES += src/main.cpp\
+        src/dialog.cpp
 
-HEADERS  += dialog.h
+HEADERS  += src/dialog.h
 
-FORMS    += dialog.ui
+FORMS    += ui/dialog.ui
 
 RESOURCES += \
-    res.qrc
+    res/res.qrc
+
+LIBS += -L../../build-qxmpp-Desktop_Qt_5_5_1_GCC_64bit-Debug/src/ -lqxmpp_d
+
+INCLUDEPATH += ../../qxmpp/src/client \
+                ../../qxmpp/src/base
+
+TRANSLATIONS += i18n/infobot.ts
 
 OTHER_FILES += \
-    infobot.ts
+    i18n/infobot.ts \
+    res/infobot.rc
 
-LIBS += -L../build-qxmpp-Desktop_Qt_5_5_1_GCC_64bit-Release/src/ -lqxmpp0
-
-INCLUDEPATH += ../qxmpp/src/client \
-                ../qxmpp/src/base
-
-TRANSLATIONS += infobot.ts
-
-OTHER_FILES += \
-    infobot.ts \
-    infobot.rc
-
-RC_FILE += infobot.rc
+RC_FILE += res/infobot.rc
